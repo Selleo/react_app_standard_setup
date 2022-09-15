@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, within } from '@testing-library/react'
+import React from 'react'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import { App } from './App'
+
+describe('App component', () => {
+  test('renders navigation and main page', () => {
+    render(<App />)
+    const linkElement = within(screen.getByRole('navigation')).getByText(
+      'Page 1'
+    )
+    expect(linkElement).toBeInTheDocument()
+
+    const pageElement = screen.getByText('This is Example Page 1')
+    expect(pageElement).toBeInTheDocument()
+  })
+})
