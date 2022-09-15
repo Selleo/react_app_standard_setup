@@ -38,7 +38,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint \"src/**/*.js*(x)\" --max-warnings=0",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precert:setup": "mkcert -install",
+    "cert:setup": "mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem dev-localhost.com && echo 127.0.0.1 dev-localhost.com >> /etc/hosts",
+    "app:setup": "cp .env.local.example .env.local && npm run cert:setup"
   },
   "browserslist": {
     "production": [

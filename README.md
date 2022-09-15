@@ -44,13 +44,16 @@ All folders directly in `/src` are being resolved like that.
 ## Setup the App
 
 ### `npm install`
+then 
+### `npm run app:setup`
+You will be asked to provide system password. This is ok, because Certificate Authority will be added and setup so https on localhost works.
 
 ## Run the App
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [https://dev-localhost.com:3000](https://dev-localhost.com:3000) to view it in the browser.
 
 ## Run the tests
 

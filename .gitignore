@@ -26,3 +26,6 @@ yarn-error.log*
 .env.*.local
 .vscode
 .idea
+
+.cert/cert.pem
+.cert/key.pem
