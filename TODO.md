@@ -1,0 +1,2 @@
+- Add selectors setup for RQ
+- Add normalizers to RQ setup
