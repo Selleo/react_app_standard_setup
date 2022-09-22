@@ -12,12 +12,10 @@ export const App = () => {
     <BrowserRouter>
       <Navigation />
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <Routes>
-            <Route path="/" element={<ExamplePage1 />} />
-            <Route path="/page2/:id" element={<ExamplePage2 />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<ExamplePage1 />} />
+          <Route path="/page2/:id" element={<ExamplePage2 />} />
+        </Routes>
       </main>
     </BrowserRouter>
   )
