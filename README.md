@@ -19,10 +19,8 @@ This project was bootstrapped using [Create React App](https://github.com/facebo
 - [classnames](https://www.npmjs.com/package/classnames) provides nice syntax for assigning classes conditionally
 - [eslint](https://www.npmjs.com/package/eslint) tool used for checking for code style & patterns with ability to automatically fix some of them
 - [prettier](https://www.npmjs.com/package/prettier) opinionated code formatter enforcing consistent code style in the whole app
-- [tailwindcss](https://tailwindcss.com/) provides helper css classes
-- [tailwindUI](https://tailwindui.com) provides ready-to-use html markup styled with tailwindcss classes. Selleo has bought plan for all components. Contact office if you want to get the access.
 
-If you want to use other tool for styling, then check branch [setup_without_tailwind](https://github.com/Selleo/react_app_standard_setup/tree/setup_without_tailwind).
+If you want to use tailwind for styling, then check branch [master](https://github.com/Selleo/react_app_standard_setup).
 
 Some might spot that there is no Redux on the list, but that's because React-Query covers most of the cases that we used Redux for. This makes Redux not to be needed since day-1 on most applications.
 
