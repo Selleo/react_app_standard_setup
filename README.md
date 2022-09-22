@@ -1,6 +1,6 @@
 # React app standard setup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and has additional setup done.
+This project was bootstrapped using [Create React App](https://github.com/facebook/create-react-app) and has additional setup.
 
 - Folders structure
   - api - [react-query](https://react-query.tanstack.com/) setup and hooks used for fetching data from the backend
@@ -21,9 +21,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [tailwindcss](https://tailwindcss.com/) provides helper css classes
 - [tailwindUI](https://tailwindui.com) provides ready-to-use html markup styled with tailwindcss classes. Selleo has bought plan for all components. Contact office if you want to get the access.
 
-If you want to use other tool for styling, then check branch [setup_without_tailwind]().
+If you want to use other tool for styling, then check branch [setup_without_tailwind](https://github.com/Selleo/react_app_standard_setup/tree/setup_without_tailwind).
 
-Some might spot that there is no Redux on the list, but that's because React-Query covers most of the cases that we used Redux for. This makes Redux not to be needed since day-1 on most applications. 
+Some might spot that there is no Redux on the list, but that's because React-Query covers most of the cases that we used Redux for. This makes Redux not to be needed since day-1 on most applications.
 
 ## Imports
 
@@ -42,6 +42,10 @@ import { useGetResourceList } from 'api/exampleResource'
 ```
 
 All folders directly in `/src` are being resolved like that.
+
+## Additional suggestions
+
+Check [bulletproof-react](https://github.com/alan2207/bulletproof-react) if you need additional suggestions for React architecture.
 
 ## Setup the App
 
