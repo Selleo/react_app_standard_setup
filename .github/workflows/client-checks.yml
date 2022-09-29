@@ -1,0 +1,24 @@
+name: Client checks
+
+on:
+  pull_request:
+    paths:
+      - "**"
+
+jobs:
+  check:
+    name: Linter and tests checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          cache: "npm"
+      - name: Install
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test
+        env:
+          REACT_APP_SOME_ACCESS_TOKEN: ${{ secrets.REACT_APP_SOME_ACCESS_TOKEN }}
