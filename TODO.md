@@ -1,3 +1,2 @@
-- Add selectors setup for RQ
 - Add normalizers to RQ setup
 - Add github actions config

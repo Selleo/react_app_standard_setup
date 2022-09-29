@@ -14,6 +14,7 @@ This project was bootstrapped using [Create React App](https://github.com/facebo
 ## Notable packages used
 
 - [react-query](https://react-query.tanstack.com/) and [axios](https://axios-http.com/) used for managing backend requests and cache
+- [reselect](https://github.com/reduxjs/reselect) used to optimize selectors used for getting partial/calculated data from RQ cashe
 - [react-router-dom](https://reactrouter.com/docs/en/v6) provides routing for our SPA
 - [classnames](https://www.npmjs.com/package/classnames) provides nice syntax for assigning classes conditionally
 - [eslint](https://www.npmjs.com/package/eslint) tool used for checking for code style & patterns with ability to automatically fix some of them
@@ -43,6 +44,46 @@ import { useGetResourceList } from 'api/exampleResource'
 
 All folders directly in `/src` are being resolved like that.
 
+## React Query Selectors
+
+By default RQ custom hooks should define their own selectors for getting the resource
+
+```js
+export const useGetResourceList = ({
+  params,
+  selectors = { resources: getResources }, // <== this
+  ...options
+} = {}) =>
+  useQuery(['resources', params], fetchResources, {
+    select: handleSelectors(selectors),
+    ...options,
+  })
+```
+
+Then in components we ca use the data like that
+
+```js
+const { data: { resources } = {} } = useGetResources({ params })
+```
+
+Or you can pass your own selectors
+
+```js
+const { data: {
+  resource,
+  resourceEnabledSomethings,
+  getResourceSomethingsWithStatus,
+} = {} } = useGetResource({
+  resourceId,
+  selectors: {
+    resource: getResource,
+    resourceEnabledSomethings: getResourceEnabledSomethings,
+    getResourceSomethingsWithStatus: (data) =>
+      getResourceSomethingsWithStatus(data, status), // selector receiving status value from component (eg. from state)
+  },
+})
+```
+
 ## Additional suggestions
 
 Check [bulletproof-react](https://github.com/alan2207/bulletproof-react) if you need additional suggestions for React architecture.
@@ -50,8 +91,11 @@ Check [bulletproof-react](https://github.com/alan2207/bulletproof-react) if you 
 ## Setup the App
 
 ### `npm install`
-then 
+
+then
+
 ### `npm run app:setup`
+
 You will be asked to provide system password. This is ok, because Certificate Authority will be added and setup so https on localhost works.
 
 ## Run the App
