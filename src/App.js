@@ -3,11 +3,6 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export const App = () => {
-  console.log(
-    `process.env.REACT_APP_SOME_ACCESS_TOKEN: `,
-    process.env.REACT_APP_SOME_ACCESS_TOKEN
-  )
-
   return (
     <BrowserRouter>
       <Navigation />
@@ -19,6 +14,7 @@ export const App = () => {
           </Routes>
         </div>
       </main>
+      <code>{process.env.REACT_APP_SOME_ACCESS_TOKEN}</code>
     </BrowserRouter>
   )
 }
