@@ -1,8 +1,11 @@
 import { ExamplePage1, ExamplePage2, Navigation } from 'pages'
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export const App = () => {
+  console.log(
+    `import.meta.env.VITE_SOME_ACCESS_TOKEN: `,
+  )
+
   return (
     <BrowserRouter>
       <Navigation />
@@ -18,7 +21,7 @@ export const App = () => {
         Token rendered in the UI (and checked in tests) as an example of GH
         secrets usage. Don't render secrets in real apps :D
       </p>
-      <code>{process.env.REACT_APP_SOME_ACCESS_TOKEN}</code>
+      <code>{import.meta.env.VITE_SOME_ACCESS_TOKEN}</code>
     </BrowserRouter>
   )
 }
