@@ -1,11 +1,10 @@
 import { ExamplePage1, ExamplePage2, Navigation } from 'pages'
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export const App = () => {
   console.log(
-    `process.env.REACT_APP_SOME_ACCESS_TOKEN: `,
-    process.env.REACT_APP_SOME_ACCESS_TOKEN
+    `import.meta.env.VITE_SOME_ACCESS_TOKEN: `,
+    import.meta.env.VITE_SOME_ACCESS_TOKEN
   )
 
   return (
