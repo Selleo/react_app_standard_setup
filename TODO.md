@@ -1,2 +1,1 @@
 - Add normalizers to RQ setup
-- Add github actions config
