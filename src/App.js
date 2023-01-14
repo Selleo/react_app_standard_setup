@@ -3,11 +3,6 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export const App = () => {
-  console.log(
-    `process.env.REACT_APP_SOME_ACCESS_TOKEN: `,
-    process.env.REACT_APP_SOME_ACCESS_TOKEN
-  )
-
   return (
     <BrowserRouter>
       <Navigation />
@@ -19,6 +14,11 @@ export const App = () => {
           </Routes>
         </div>
       </main>
+      <p>
+        Token rendered in the UI (and checked in tests) as an example of GH
+        secrets usage. Don't render secrets in real apps :D
+      </p>
+      <code>{process.env.REACT_APP_SOME_ACCESS_TOKEN}</code>
     </BrowserRouter>
   )
 }
