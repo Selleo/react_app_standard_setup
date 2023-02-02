@@ -2,10 +2,6 @@ import { ExamplePage1, ExamplePage2, Navigation } from 'pages'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 export const App = () => {
-  console.log(
-    `import.meta.env.VITE_SOME_ACCESS_TOKEN: `,
-  )
-
   return (
     <BrowserRouter>
       <Navigation />

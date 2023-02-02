@@ -13,9 +13,9 @@ describe('App component', () => {
     const pageElement = screen.getByText('This is Example Page 1')
     expect(pageElement).toBeInTheDocument()
 
-    expect(process.env.REACT_APP_SOME_ACCESS_TOKEN).toBeDefined()
+    expect(import.meta.env.VITE_SOME_ACCESS_TOKEN).toBeDefined()
     expect(
-      screen.getByText(process.env.REACT_APP_SOME_ACCESS_TOKEN)
+      screen.getByText(import.meta.env.VITE_SOME_ACCESS_TOKEN)
     ).toBeInTheDocument()
   })
 })
