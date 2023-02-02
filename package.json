@@ -21,28 +21,36 @@
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.2.5",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-import": "^2.27.4",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@vitejs/plugin-react": "^2.1.0",
+    "@vitest/coverage-c8": "^0.23.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.8.3",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.4"
+    "jsdom": "^20.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.1.4",
+    "vite-plugin-mkcert": "^1.10.1",
+    "vite-plugin-svgr": "^2.2.1",
+    "vite-tsconfig-paths": "^3.5.1",
+    "vitest": "^0.23.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "vitest watch",
+    "test:no-watch": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint \"src/**/*.js*(x)\" --max-warnings=0",
-    "eject": "react-scripts eject",
-    "precert:setup": "mkcert -install",
-    "cert:setup": "mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem dev-localhost.com && echo 127.0.0.1 dev-localhost.com >> /etc/hosts",
-    "app:setup": "cp .env.local.example .env.local && npm run cert:setup"
+    "app:setup": "cp .env.local.example .env.local"
   },
   "browserslist": {
     "production": [

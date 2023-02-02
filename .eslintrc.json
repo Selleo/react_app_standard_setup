@@ -27,7 +27,14 @@
         "*.spec.js"
       ],
       "rules": {
-        "max-lines": "off"
+        "max-lines": [
+          "error",
+          {
+            "max": 900,
+            "skipBlankLines": false,
+            "skipComments": false
+          }
+        ]
       }
     },
     {

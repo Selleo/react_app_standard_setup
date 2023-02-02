@@ -1,6 +1,6 @@
 # React app standard setup
 
-This project was bootstrapped using [Create React App](https://github.com/facebook/create-react-app) and has additional setup.
+This project was bootstrapped using [Create React App](https://github.com/facebook/create-react-app) and migrated to [Vite](https://vitejs.dev/).
 
 - Folders structure
   - api - [react-query](https://react-query.tanstack.com/) setup and hooks used for fetching data from the backend
@@ -22,13 +22,11 @@ This project was bootstrapped using [Create React App](https://github.com/facebo
 - [tailwindcss](https://tailwindcss.com/) provides helper css classes
 - [tailwindUI](https://tailwindui.com) provides ready-to-use html markup styled with tailwindcss classes. Selleo has bought plan for all components. Contact office if you want to get the access.
 
-If you want to use other tool for styling, then check branch [setup_without_tailwind](https://github.com/Selleo/react_app_standard_setup/tree/setup_without_tailwind).
-
 Some might spot that there is no Redux on the list, but that's because React-Query covers most of the cases that we used Redux for. This makes Redux not to be needed since day-1 on most applications.
 
 ## Imports
 
-Imports are being resolved, so when you are in `/src/pages/Navigation/Navigation.js` and want to import a function from `/src/api/exampleResource/index.js`
+Imports are being resolved, so when you are in `/src/pages/Navigation/Navigation.jsx` and want to import a function from `/src/api/exampleResource/index.js`
 
 Normally you would have to
 
@@ -96,14 +94,12 @@ then
 
 ### `npm run app:setup`
 
-You will be asked to provide system password. This is ok, because Certificate Authority will be added and setup so https on localhost works.
-
 ## Run the App
 
+When you start you app for the first time you would be asked for system password - it is required by mkcert to issue new certificate. You can disable it in `vite.config.ts` file.
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [https://dev-localhost.com:3000](https://dev-localhost.com:3000) to view it in the browser.
+Runs the app in the development mode.
 
 ## Run the tests
 
@@ -121,5 +117,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
