@@ -1,1 +1,3 @@
 - Add normalizers to RQ setup
+- Resolvers with @ https://github.com/alan2207/bulletproof-react/blob/master/docs/project-configuration.md#absolute-imports
+- Auto transforming imports from barrel to direct
