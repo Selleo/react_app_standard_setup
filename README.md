@@ -3,7 +3,7 @@
 This project was bootstrapped using [Create React App](https://github.com/facebook/create-react-app) and migrated to [Vite](https://vitejs.dev/).
 
 - Folders structure
-  - api - [react-query](https://react-query.tanstack.com/) setup and hooks used for fetching data from the backend
+  - api - [tanstack-query](https://tanstack.com/query/v4/docs/react/overview) setup and hooks used for fetching data from the backend
   - components - reusable components **not tied to specific place** of the application
   - constants - constant hardcoded values **not tied to specific place**
   - contexts - contexts for sharing data across the application
@@ -13,7 +13,7 @@ This project was bootstrapped using [Create React App](https://github.com/facebo
 
 ## Notable packages used
 
-- [react-query](https://react-query.tanstack.com/) and [axios](https://axios-http.com/) used for managing backend requests and cache
+- [tanstack-query](https://tanstack.com/query/v4/docs/react/overview) and [axios](https://axios-http.com/) used for managing backend requests and cache
 - [reselect](https://github.com/reduxjs/reselect) used to optimize selectors used for getting partial/calculated data from RQ cashe
 - [react-router-dom](https://reactrouter.com/docs/en/v6) provides routing for our SPA
 - [classnames](https://www.npmjs.com/package/classnames) provides nice syntax for assigning classes conditionally
@@ -22,7 +22,7 @@ This project was bootstrapped using [Create React App](https://github.com/facebo
 - [tailwindcss](https://tailwindcss.com/) provides helper css classes
 - [tailwindUI](https://tailwindui.com) provides ready-to-use html markup styled with tailwindcss classes. Selleo has bought plan for all components. Contact office if you want to get the access.
 
-Some might spot that there is no Redux on the list, but that's because React-Query covers most of the cases that we used Redux for. This makes Redux not to be needed since day-1 on most applications.
+Some might spot that there is no Redux on the list, but that's because Tanstack-Query covers most of the cases that we used Redux for. This makes Redux not to be needed since day-1 on most applications.
 
 ## Imports
 
